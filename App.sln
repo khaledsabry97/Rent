@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2024
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rent", "DBapplication\Rent.csproj", "{DC8232D5-B804-4766-8840-C88C50EAD01E}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Rentsetup", "Rentsetup\Rentsetup.vdproj", "{175C770B-8E7B-4431-B94A-99587567E948}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DC8232D5-B804-4766-8840-C88C50EAD01E}.Debug|x86.ActiveCfg = Debug|x86
+		{DC8232D5-B804-4766-8840-C88C50EAD01E}.Debug|x86.Build.0 = Debug|x86
+		{DC8232D5-B804-4766-8840-C88C50EAD01E}.Release|x86.ActiveCfg = Release|x86
+		{DC8232D5-B804-4766-8840-C88C50EAD01E}.Release|x86.Build.0 = Release|x86
+		{175C770B-8E7B-4431-B94A-99587567E948}.Debug|x86.ActiveCfg = Debug
+		{175C770B-8E7B-4431-B94A-99587567E948}.Release|x86.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0F8513F1-7C46-494F-9EA3-DACFB0F155BD}
+	EndGlobalSection
+EndGlobal

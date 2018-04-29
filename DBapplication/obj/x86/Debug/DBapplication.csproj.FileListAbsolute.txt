@@ -1,0 +1,9 @@
+E:\DataBase Projects\[DB] Lab 5\Code (1)\DBapplication\DBapplication\obj\x86\Debug\DBapplication.csprojResolveAssemblyReference.cache
+E:\DataBase Projects\[DB] Lab 5\Code (1)\DBapplication\DBapplication\obj\x86\Debug\DBapplication.Supplier.resources
+E:\DataBase Projects\[DB] Lab 5\Code (1)\DBapplication\DBapplication\obj\x86\Debug\DBapplication.Properties.Resources.resources
+E:\DataBase Projects\[DB] Lab 5\Code (1)\DBapplication\DBapplication\obj\x86\Debug\DBapplication.csproj.GenerateResource.Cache
+E:\DataBase Projects\[DB] Lab 5\Code (1)\DBapplication\DBapplication\obj\x86\Debug\DBapplication.csproj.CoreCompileInputs.cache
+E:\DataBase Projects\[DB] Lab 5\Code (1)\DBapplication\DBapplication\bin\Debug\DBapplication.exe
+E:\DataBase Projects\[DB] Lab 5\Code (1)\DBapplication\DBapplication\bin\Debug\DBapplication.pdb
+E:\DataBase Projects\[DB] Lab 5\Code (1)\DBapplication\DBapplication\obj\x86\Debug\DBapplication.exe
+E:\DataBase Projects\[DB] Lab 5\Code (1)\DBapplication\DBapplication\obj\x86\Debug\DBapplication.pdb

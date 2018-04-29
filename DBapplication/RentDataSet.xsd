@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="RentDataSet" targetNamespace="http://tempuri.org/RentDataSet.xsd" xmlns:mstns="http://tempuri.org/RentDataSet.xsd" xmlns="http://tempuri.org/RentDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="RentConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="RentConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DBapplication.Properties.Settings.GlobalReference.Default.RentConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ApartmentTableAdapter" GeneratorDataComponentClassName="ApartmentTableAdapter" Name="Apartment" UserDataComponentName="ApartmentTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RentConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT  a.Name,p.name, p.Rental_Price, p.Start_Date, p.End_Date, p.Increasing_Percentage, p.Increasing_Date,p.phone, p.Insurance, p.Services, electricity_account_no, electricity_counter_no, Water_Account_No, Water_Counter_No, Gas_Account_No, Gas_Counter_No, p.Address, p.Email, p.Description FROM dbo.Apartment a,person p where p.id = a.person_id</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="electricity_account_no" DataSetColumn="electricity_account_no" />
+              <Mapping SourceColumn="electricity_counter_no" DataSetColumn="electricity_counter_no" />
+              <Mapping SourceColumn="Water_Account_No" DataSetColumn="Water_Account_No" />
+              <Mapping SourceColumn="Water_Counter_No" DataSetColumn="Water_Counter_No" />
+              <Mapping SourceColumn="Gas_Account_No" DataSetColumn="Gas_Account_No" />
+              <Mapping SourceColumn="Gas_Counter_No" DataSetColumn="Gas_Counter_No" />
+              <Mapping SourceColumn="name1" DataSetColumn="name1" />
+              <Mapping SourceColumn="phone" DataSetColumn="phone" />
+              <Mapping SourceColumn="Start_Date" DataSetColumn="Start_Date" />
+              <Mapping SourceColumn="End_Date" DataSetColumn="End_Date" />
+              <Mapping SourceColumn="Rental_Price" DataSetColumn="Rental_Price" />
+              <Mapping SourceColumn="Increasing_Percentage" DataSetColumn="Increasing_Percentage" />
+              <Mapping SourceColumn="Increasing_Date" DataSetColumn="Increasing_Date" />
+              <Mapping SourceColumn="Insurance" DataSetColumn="Insurance" />
+              <Mapping SourceColumn="Services" DataSetColumn="Services" />
+              <Mapping SourceColumn="Address" DataSetColumn="Address" />
+              <Mapping SourceColumn="Email" DataSetColumn="Email" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="RentConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT a.Name,p.name, p.Phone, p.Start_Date, p.End_Date, p.Rental_Price, p.Increasing_Percentage, p.Increasing_Date, p.Insurance, p.Services, p.Address, p.Email, p.Description,a.electricity_account_no, a.electricity_counter_no, a.Water_Account_No, a.Water_Counter_No, a.Gas_Account_No, a.Gas_Counter_No, a.Kind FROM Person p, apartment a where p.id = a.person_id</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PersonTableAdapter" GeneratorDataComponentClassName="PersonTableAdapter" Name="Person" UserDataComponentName="PersonTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RentConnectionString (Settings)" DbObjectName="Rent.dbo.Person" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[Person] WHERE (([ID] = @Original_ID) AND ([Name] = @Original_Name) AND ([Phone] = @Original_Phone) AND ([Start_Date] = @Original_Start_Date) AND ([End_Date] = @Original_End_Date) AND ([Rental_Price] = @Original_Rental_Price) AND ([Increasing_Percentage] = @Original_Increasing_Percentage) AND ([Increasing_Date] = @Original_Increasing_Date) AND ([Insurance] = @Original_Insurance) AND ([Services] = @Original_Services) AND ((@IsNull_Address = 1 AND [Address] IS NULL) OR ([Address] = @Original_Address)) AND ((@IsNull_Email = 1 AND [Email] IS NULL) OR ([Email] = @Original_Email)) AND ((@IsNull_Description = 1 AND [Description] IS NULL) OR ([Description] = @Original_Description)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Name" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Phone" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Phone" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_Start_Date" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Start_Date" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_End_Date" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="End_Date" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_Rental_Price" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Rental_Price" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Increasing_Percentage" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Increasing_Percentage" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_Increasing_Date" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Increasing_Date" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_Insurance" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Insurance" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_Services" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Services" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Address" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Address" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Address" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Address" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Email" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Email" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Email" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Email" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[Person] ([ID], [Name], [Phone], [Start_Date], [End_Date], [Rental_Price], [Increasing_Percentage], [Increasing_Date], [Insurance], [Services], [Address], [Email], [Description]) VALUES (@ID, @Name, @Phone, @Start_Date, @End_Date, @Rental_Price, @Increasing_Percentage, @Increasing_Date, @Insurance, @Services, @Address, @Email, @Description);
+SELECT ID, Name, Phone, Start_Date, End_Date, Rental_Price, Increasing_Percentage, Increasing_Date, Insurance, Services, Address, Email, Description FROM Person WHERE (ID = @ID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Name" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Phone" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Phone" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Start_Date" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Start_Date" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@End_Date" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="End_Date" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Rental_Price" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Rental_Price" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Increasing_Percentage" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Increasing_Percentage" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Increasing_Date" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Increasing_Date" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Insurance" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Insurance" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Services" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Services" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Address" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Address" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Email" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Email" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID, Name, Phone, Start_Date, End_Date, Rental_Price, Increasing_Percentage, Increasing_Date, Insurance, Services, Address, Email, Description FROM dbo.Person</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[Person] SET [ID] = @ID, [Name] = @Name, [Phone] = @Phone, [Start_Date] = @Start_Date, [End_Date] = @End_Date, [Rental_Price] = @Rental_Price, [Increasing_Percentage] = @Increasing_Percentage, [Increasing_Date] = @Increasing_Date, [Insurance] = @Insurance, [Services] = @Services, [Address] = @Address, [Email] = @Email, [Description] = @Description WHERE (([ID] = @Original_ID) AND ([Name] = @Original_Name) AND ([Phone] = @Original_Phone) AND ([Start_Date] = @Original_Start_Date) AND ([End_Date] = @Original_End_Date) AND ([Rental_Price] = @Original_Rental_Price) AND ([Increasing_Percentage] = @Original_Increasing_Percentage) AND ([Increasing_Date] = @Original_Increasing_Date) AND ([Insurance] = @Original_Insurance) AND ([Services] = @Original_Services) AND ((@IsNull_Address = 1 AND [Address] IS NULL) OR ([Address] = @Original_Address)) AND ((@IsNull_Email = 1 AND [Email] IS NULL) OR ([Email] = @Original_Email)) AND ((@IsNull_Description = 1 AND [Description] IS NULL) OR ([Description] = @Original_Description)));
+SELECT ID, Name, Phone, Start_Date, End_Date, Rental_Price, Increasing_Percentage, Increasing_Date, Insurance, Services, Address, Email, Description FROM Person WHERE (ID = @ID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Name" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Phone" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Phone" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Start_Date" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Start_Date" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@End_Date" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="End_Date" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Rental_Price" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Rental_Price" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Increasing_Percentage" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Increasing_Percentage" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Increasing_Date" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Increasing_Date" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Insurance" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Insurance" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Services" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Services" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Address" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Address" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Email" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Email" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Name" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Phone" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Phone" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_Start_Date" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Start_Date" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_End_Date" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="End_Date" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_Rental_Price" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Rental_Price" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Increasing_Percentage" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Increasing_Percentage" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_Increasing_Date" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Increasing_Date" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_Insurance" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Insurance" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_Services" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Services" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Address" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Address" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Address" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Address" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Email" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Email" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Email" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Email" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="Phone" DataSetColumn="Phone" />
+              <Mapping SourceColumn="Start_Date" DataSetColumn="Start_Date" />
+              <Mapping SourceColumn="End_Date" DataSetColumn="End_Date" />
+              <Mapping SourceColumn="Rental_Price" DataSetColumn="Rental_Price" />
+              <Mapping SourceColumn="Increasing_Percentage" DataSetColumn="Increasing_Percentage" />
+              <Mapping SourceColumn="Increasing_Date" DataSetColumn="Increasing_Date" />
+              <Mapping SourceColumn="Insurance" DataSetColumn="Insurance" />
+              <Mapping SourceColumn="Services" DataSetColumn="Services" />
+              <Mapping SourceColumn="Address" DataSetColumn="Address" />
+              <Mapping SourceColumn="Email" DataSetColumn="Email" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="RentConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT a.Name,p.name, p.Phone, p.Start_Date, p.End_Date, p.Rental_Price, p.Increasing_Percentage, p.Increasing_Date, p.Insurance, p.Services, p.Address, p.Email, p.Description,a.electricity_account_no, a.electricity_counter_no, a.Water_Account_No, a.Water_Counter_No, a.Gas_Account_No, a.Gas_Counter_No, a.Kind FROM Person p, apartment a where p.id = a.person_id</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="RentDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="RentDataSet" msprop:Generator_UserDSName="RentDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Apartment" msprop:Generator_TableClassName="ApartmentDataTable" msprop:Generator_TableVarName="tableApartment" msprop:Generator_TablePropName="Apartment" msprop:Generator_RowDeletingName="ApartmentRowDeleting" msprop:Generator_RowChangingName="ApartmentRowChanging" msprop:Generator_RowEvHandlerName="ApartmentRowChangeEventHandler" msprop:Generator_RowDeletedName="ApartmentRowDeleted" msprop:Generator_UserTableName="Apartment" msprop:Generator_RowChangedName="ApartmentRowChanged" msprop:Generator_RowEvArgName="ApartmentRowChangeEvent" msprop:Generator_RowClassName="ApartmentRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="140" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="electricity_account_no" msprop:Generator_ColumnVarNameInTable="columnelectricity_account_no" msprop:Generator_ColumnPropNameInRow="electricity_account_no" msprop:Generator_ColumnPropNameInTable="electricity_account_noColumn" msprop:Generator_UserColumnName="electricity_account_no" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="electricity_counter_no" msprop:Generator_ColumnVarNameInTable="columnelectricity_counter_no" msprop:Generator_ColumnPropNameInRow="electricity_counter_no" msprop:Generator_ColumnPropNameInTable="electricity_counter_noColumn" msprop:Generator_UserColumnName="electricity_counter_no" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Water_Account_No" msprop:Generator_ColumnVarNameInTable="columnWater_Account_No" msprop:Generator_ColumnPropNameInRow="Water_Account_No" msprop:Generator_ColumnPropNameInTable="Water_Account_NoColumn" msprop:Generator_UserColumnName="Water_Account_No" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Water_Counter_No" msprop:Generator_ColumnVarNameInTable="columnWater_Counter_No" msprop:Generator_ColumnPropNameInRow="Water_Counter_No" msprop:Generator_ColumnPropNameInTable="Water_Counter_NoColumn" msprop:Generator_UserColumnName="Water_Counter_No" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Gas_Account_No" msprop:Generator_ColumnVarNameInTable="columnGas_Account_No" msprop:Generator_ColumnPropNameInRow="Gas_Account_No" msprop:Generator_ColumnPropNameInTable="Gas_Account_NoColumn" msprop:Generator_UserColumnName="Gas_Account_No" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Gas_Counter_No" msprop:Generator_ColumnVarNameInTable="columnGas_Counter_No" msprop:Generator_ColumnPropNameInRow="Gas_Counter_No" msprop:Generator_ColumnPropNameInTable="Gas_Counter_NoColumn" msprop:Generator_UserColumnName="Gas_Counter_No" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="name1" msprop:Generator_ColumnVarNameInTable="columnname1" msprop:Generator_ColumnPropNameInRow="name1" msprop:Generator_ColumnPropNameInTable="name1Column" msprop:Generator_UserColumnName="name1">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="phone" msprop:Generator_ColumnVarNameInTable="columnphone" msprop:Generator_ColumnPropNameInRow="phone" msprop:Generator_ColumnPropNameInTable="phoneColumn" msprop:Generator_UserColumnName="phone" type="xs:string" minOccurs="0" />
+              <xs:element name="Start_Date" msprop:Generator_ColumnVarNameInTable="columnStart_Date" msprop:Generator_ColumnPropNameInRow="Start_Date" msprop:Generator_ColumnPropNameInTable="Start_DateColumn" msprop:Generator_UserColumnName="Start_Date" type="xs:dateTime" />
+              <xs:element name="End_Date" msprop:Generator_ColumnVarNameInTable="columnEnd_Date" msprop:Generator_ColumnPropNameInRow="End_Date" msprop:Generator_ColumnPropNameInTable="End_DateColumn" msprop:Generator_UserColumnName="End_Date" type="xs:dateTime" />
+              <xs:element name="Rental_Price" msprop:Generator_ColumnVarNameInTable="columnRental_Price" msprop:Generator_ColumnPropNameInRow="Rental_Price" msprop:Generator_ColumnPropNameInTable="Rental_PriceColumn" msprop:Generator_UserColumnName="Rental_Price" type="xs:decimal" />
+              <xs:element name="Increasing_Percentage" msprop:Generator_ColumnVarNameInTable="columnIncreasing_Percentage" msprop:Generator_ColumnPropNameInRow="Increasing_Percentage" msprop:Generator_ColumnPropNameInTable="Increasing_PercentageColumn" msprop:Generator_UserColumnName="Increasing_Percentage" type="xs:int" />
+              <xs:element name="Increasing_Date" msprop:Generator_ColumnVarNameInTable="columnIncreasing_Date" msprop:Generator_ColumnPropNameInRow="Increasing_Date" msprop:Generator_ColumnPropNameInTable="Increasing_DateColumn" msprop:Generator_UserColumnName="Increasing_Date" type="xs:dateTime" />
+              <xs:element name="Insurance" msprop:Generator_ColumnVarNameInTable="columnInsurance" msprop:Generator_ColumnPropNameInRow="Insurance" msprop:Generator_ColumnPropNameInTable="InsuranceColumn" msprop:Generator_UserColumnName="Insurance" type="xs:decimal" />
+              <xs:element name="Services" msprop:Generator_ColumnVarNameInTable="columnServices" msprop:Generator_ColumnPropNameInRow="Services" msprop:Generator_ColumnPropNameInTable="ServicesColumn" msprop:Generator_UserColumnName="Services" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Address" msprop:Generator_ColumnVarNameInTable="columnAddress" msprop:Generator_ColumnPropNameInRow="Address" msprop:Generator_ColumnPropNameInTable="AddressColumn" msprop:Generator_UserColumnName="Address" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Email" msprop:Generator_ColumnVarNameInTable="columnEmail" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_UserColumnName="Email" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="140" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Person" msprop:Generator_TableClassName="PersonDataTable" msprop:Generator_TableVarName="tablePerson" msprop:Generator_TablePropName="Person" msprop:Generator_RowDeletingName="PersonRowDeleting" msprop:Generator_RowChangingName="PersonRowChanging" msprop:Generator_RowEvHandlerName="PersonRowChangeEventHandler" msprop:Generator_RowDeletedName="PersonRowDeleted" msprop:Generator_UserTableName="Person" msprop:Generator_RowChangedName="PersonRowChanged" msprop:Generator_RowEvArgName="PersonRowChangeEvent" msprop:Generator_RowClassName="PersonRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Phone" msprop:Generator_ColumnVarNameInTable="columnPhone" msprop:Generator_ColumnPropNameInRow="Phone" msprop:Generator_ColumnPropNameInTable="PhoneColumn" msprop:Generator_UserColumnName="Phone" type="xs:int" />
+              <xs:element name="Start_Date" msprop:Generator_ColumnVarNameInTable="columnStart_Date" msprop:Generator_ColumnPropNameInRow="Start_Date" msprop:Generator_ColumnPropNameInTable="Start_DateColumn" msprop:Generator_UserColumnName="Start_Date" type="xs:dateTime" />
+              <xs:element name="End_Date" msprop:Generator_ColumnVarNameInTable="columnEnd_Date" msprop:Generator_ColumnPropNameInRow="End_Date" msprop:Generator_ColumnPropNameInTable="End_DateColumn" msprop:Generator_UserColumnName="End_Date" type="xs:dateTime" />
+              <xs:element name="Rental_Price" msprop:Generator_ColumnVarNameInTable="columnRental_Price" msprop:Generator_ColumnPropNameInRow="Rental_Price" msprop:Generator_ColumnPropNameInTable="Rental_PriceColumn" msprop:Generator_UserColumnName="Rental_Price" type="xs:decimal" />
+              <xs:element name="Increasing_Percentage" msprop:Generator_ColumnVarNameInTable="columnIncreasing_Percentage" msprop:Generator_ColumnPropNameInRow="Increasing_Percentage" msprop:Generator_ColumnPropNameInTable="Increasing_PercentageColumn" msprop:Generator_UserColumnName="Increasing_Percentage" type="xs:int" />
+              <xs:element name="Increasing_Date" msprop:Generator_ColumnVarNameInTable="columnIncreasing_Date" msprop:Generator_ColumnPropNameInRow="Increasing_Date" msprop:Generator_ColumnPropNameInTable="Increasing_DateColumn" msprop:Generator_UserColumnName="Increasing_Date" type="xs:dateTime" />
+              <xs:element name="Insurance" msprop:Generator_ColumnVarNameInTable="columnInsurance" msprop:Generator_ColumnPropNameInRow="Insurance" msprop:Generator_ColumnPropNameInTable="InsuranceColumn" msprop:Generator_UserColumnName="Insurance" type="xs:decimal" />
+              <xs:element name="Services" msprop:Generator_ColumnVarNameInTable="columnServices" msprop:Generator_ColumnPropNameInRow="Services" msprop:Generator_ColumnPropNameInTable="ServicesColumn" msprop:Generator_UserColumnName="Services" type="xs:decimal" />
+              <xs:element name="Address" msprop:Generator_ColumnVarNameInTable="columnAddress" msprop:Generator_ColumnPropNameInRow="Address" msprop:Generator_ColumnPropNameInTable="AddressColumn" msprop:Generator_UserColumnName="Address" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Email" msprop:Generator_ColumnVarNameInTable="columnEmail" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_UserColumnName="Email" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="140" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="apartment_Name" msprop:Generator_ColumnVarNameInTable="columnapartment_Name" msprop:Generator_ColumnPropNameInRow="apartment_Name" msprop:Generator_ColumnPropNameInTable="apartment_NameColumn" msprop:Generator_UserColumnName="apartment_Name" type="xs:string" minOccurs="0" />
+              <xs:element name="electricity_account_no" msprop:Generator_ColumnVarNameInTable="columnelectricity_account_no" msprop:Generator_ColumnPropNameInRow="electricity_account_no" msprop:Generator_ColumnPropNameInTable="electricity_account_noColumn" msprop:Generator_UserColumnName="electricity_account_no" type="xs:string" minOccurs="0" />
+              <xs:element name="electricity_counter_no" msprop:Generator_ColumnVarNameInTable="columnelectricity_counter_no" msprop:Generator_ColumnPropNameInRow="electricity_counter_no" msprop:Generator_ColumnPropNameInTable="electricity_counter_noColumn" msprop:Generator_UserColumnName="electricity_counter_no" type="xs:string" minOccurs="0" />
+              <xs:element name="Water_Account_No" msprop:Generator_ColumnVarNameInTable="columnWater_Account_No" msprop:Generator_ColumnPropNameInRow="Water_Account_No" msprop:Generator_ColumnPropNameInTable="Water_Account_NoColumn" msprop:Generator_UserColumnName="Water_Account_No" type="xs:string" minOccurs="0" />
+              <xs:element name="Water_Counter_No" msprop:Generator_ColumnVarNameInTable="columnWater_Counter_No" msprop:Generator_ColumnPropNameInRow="Water_Counter_No" msprop:Generator_ColumnPropNameInTable="Water_Counter_NoColumn" msprop:Generator_UserColumnName="Water_Counter_No" type="xs:string" minOccurs="0" />
+              <xs:element name="Gas_Account_No" msprop:Generator_ColumnVarNameInTable="columnGas_Account_No" msprop:Generator_ColumnPropNameInRow="Gas_Account_No" msprop:Generator_ColumnPropNameInTable="Gas_Account_NoColumn" msprop:Generator_UserColumnName="Gas_Account_No" type="xs:string" minOccurs="0" />
+              <xs:element name="Gas_Counter_No" msprop:Generator_ColumnVarNameInTable="columnGas_Counter_No" msprop:Generator_ColumnPropNameInRow="Gas_Counter_No" msprop:Generator_ColumnPropNameInTable="Gas_Counter_NoColumn" msprop:Generator_UserColumnName="Gas_Counter_No" type="xs:string" minOccurs="0" />
+              <xs:element name="Kind" msprop:Generator_ColumnVarNameInTable="columnKind" msprop:Generator_ColumnPropNameInRow="Kind" msprop:Generator_ColumnPropNameInTable="KindColumn" msprop:Generator_UserColumnName="Kind" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Person" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

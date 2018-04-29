@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DC8232D5-B804-4766-8840-C88C50EAD01E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DBapplication</RootNamespace>
+    <AssemblyName>DBapplication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Add_Apartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_Apartment.Designer.cs">
+      <DependentUpon>Add_Apartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add_Apartment_Image.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_Apartment_Image.Designer.cs">
+      <DependentUpon>Add_Apartment_Image.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add_Image.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_Image.Designer.cs">
+      <DependentUpon>Add_Image.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllInformation.Designer.cs">
+      <DependentUpon>AllInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Apartment.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Apartment.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Break_Contract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Break_Contract.Designer.cs">
+      <DependentUpon>Break_Contract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller.cs" />
+    <Compile Include="DBManager.cs" />
+    <Compile Include="Edit_Apartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_Apartment.Designer.cs">
+      <DependentUpon>Edit_Apartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_Image.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_Image.Designer.cs">
+      <DependentUpon>Edit_Image.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_Apartment_Contract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_Apartment_Contract.Designer.cs">
+      <DependentUpon>Edit_Apartment_Contract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_Information_Contract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_Information_Contract.Designer.cs">
+      <DependentUpon>Edit_Information_Contract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Images.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Images.Designer.cs">
+      <DependentUpon>Images.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageBoxs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageBoxs.Designer.cs">
+      <DependentUpon>MessageBoxs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Month.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Month.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Person.cs">
+      <DependentUpon>Person.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Person.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Person.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PrintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintForm.Designer.cs">
+      <DependentUpon>PrintForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Printing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Printing.Designer.cs">
+      <DependentUpon>Printing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Renew_Contract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Renew_Contract.Designer.cs">
+      <DependentUpon>Renew_Contract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RentDataSet.cs">
+      <DependentUpon>RentDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RentDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RentDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ShowRenewPeople.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowRenewPeople.Designer.cs">
+      <DependentUpon>ShowRenewPeople.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Show_Pic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Show_Pic.Designer.cs">
+      <DependentUpon>Show_Pic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sign_Contract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sign_Contract.Designer.cs">
+      <DependentUpon>Sign_Contract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Update_Rent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Update_Rent.Designer.cs">
+      <DependentUpon>Update_Rent.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Add_Apartment.resx">
+      <DependentUpon>Add_Apartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add_Apartment_Image.resx">
+      <DependentUpon>Add_Apartment_Image.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add_Image.resx">
+      <DependentUpon>Add_Image.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllInformation.resx">
+      <DependentUpon>AllInformation.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Break_Contract.resx">
+      <DependentUpon>Break_Contract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_Apartment.resx">
+      <DependentUpon>Edit_Apartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_Image.resx">
+      <DependentUpon>Edit_Image.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_Apartment_Contract.resx">
+      <DependentUpon>Edit_Apartment_Contract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_Information_Contract.resx">
+      <DependentUpon>Edit_Information_Contract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images.resx">
+      <DependentUpon>Images.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageBoxs.resx">
+      <DependentUpon>MessageBoxs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintForm.resx">
+      <DependentUpon>PrintForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing.resx">
+      <DependentUpon>Printing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Renew_Contract.resx">
+      <DependentUpon>Renew_Contract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowRenewPeople.resx">
+      <DependentUpon>ShowRenewPeople.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Show_Pic.resx">
+      <DependentUpon>Show_Pic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sign_Contract.resx">
+      <DependentUpon>Sign_Contract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update_Rent.resx">
+      <DependentUpon>Update_Rent.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Apartment.xsc">
+      <DependentUpon>Apartment.xsd</DependentUpon>
+    </None>
+    <None Include="Apartment.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Apartment.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Apartment.xss">
+      <DependentUpon>Apartment.xsd</DependentUpon>
+    </None>
+    <None Include="App.config" />
+    <None Include="Month.xsc">
+      <DependentUpon>Month.xsd</DependentUpon>
+    </None>
+    <None Include="Month.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Month.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Month.xss">
+      <DependentUpon>Month.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Person.xsc">
+      <DependentUpon>Person.xsd</DependentUpon>
+    </None>
+    <None Include="Person.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Person.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Person.xss">
+      <DependentUpon>Person.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RentDataSet.xsc">
+      <DependentUpon>RentDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="RentDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RentDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RentDataSet.xss">
+      <DependentUpon>RentDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\5656545-mobile-wallpapers.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c0105546-milky_way_galactic_centre_composite-spl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\15789-illustration-of-a-blank-glossy-rectangular-button-pv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\g134841.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\g137719.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\no-photo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\no-image-available.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
