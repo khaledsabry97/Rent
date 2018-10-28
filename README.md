@@ -1,6 +1,9 @@
 # Rent
 this is an app is used by the person who has apartments, shops or any block who rent it , this app arranges to him the contracts ,the payments and a lot of things
 
+## Language 
+- Arabic (if you want another language send me a message)
+
 ## Main Menu
 ### You can do the following :-
 - Add Block
