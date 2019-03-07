@@ -11,6 +11,7 @@ This is an app is used by the person who has apartments, shops, warehouses or an
 - Renew Contract
 - Edit Block Info
 - Edit Contract Info
+- Show Contract renewal date
 - See Contracts Info
 - Show Contract End Dates
 - Show Images [contracts,bills or what you added..]
@@ -91,6 +92,22 @@ This is an app is used by the person who has apartments, shops, warehouses or an
 - Add photos for contract and identity card of the renter and you can add anything else
 
 ![alt text](https://github.com/khaledsabry97/Rent/blob/master/Pictures/edit%20contract.jpg)
+
+## Show Contract renewal date
+### You can see the following :-
+- renter name: will appear according to the month
+- current rent cost
+
+![alt text](https://github.com/khaledsabry97/Rent/blob/master/Pictures/show%20contract%20renewal%20date.jpg)
+
+## Show All Photos
+### You can do the following :-
+- select renter name
+- select block name
+- zoom the photo
+- add images
+
+![alt text](https://github.com/khaledsabry97/Rent/blob/master/Pictures/photo%20big%20view.jpg)
 
 ## See Contracts Info
 ### You can see the following :-
