@@ -19,14 +19,25 @@ This is an app is used by the person who has apartments, shops, warehouses or an
 
 ## Add Block
 ### You can add the following :-
-- block type: determine block type (Apartment, shop or warehouse)
-- Apartment Name: give to your block unique name like address
+- Block type: determine block type (Apartment, shop or warehouse)
+- Block Name: give to your block unique name like address
 - Electricity Account Number
 - Water Account Number
 - Gas Account Number
-- add photos for the block: some photos like apartment look any photo if you want to add or you can modify it later
+- Add photos for the block: some photos like apartment look any photo if you want to add or you can modify it later
 
 ![alt text](https://github.com/khaledsabry97/Rent/blob/master/Pictures/add%20block.jpg)
+
+## Edit Block
+### You can edit the following :-
+- Block type
+- Block Name: by selecting the current block name
+- Electricity Account Number
+- Water Account Number
+- Gas Account Number
+- Add photos for the block: some photos like apartment look any photo if you want to add or you can modify it later
+
+![alt text](https://github.com/khaledsabry97/Rent/blob/master/Pictures/edit%20block%20data.jpg)
 
 ## Sign Contract
 ### You can add the following :-
@@ -39,13 +50,10 @@ This is an app is used by the person who has apartments, shops, warehouses or an
 - Incrementing Ratio
 - Renter Phone
 - Warranty
-- Electricity Counter Number (related to the renter consumption)
-- Water Counter Number (related to the renter consumption)
-- Gas Counter Number (related to the renter consumption)
 - Renter Original Address
 - Renter Email
-- any comment about the contract
-- add photos for contract and identity card of the renter and you can add anything else
+- Any comment about the contract
+- Add photos for contract and identity card of the renter and you can add anything else
 
 ![alt text](https://github.com/khaledsabry97/Rent/blob/master/Pictures/add%20photos.jpg)
 
@@ -56,10 +64,33 @@ This is an app is used by the person who has apartments, shops, warehouses or an
 - Incrementing Ratio Date
 - Incrementing Ratio
 - Rent Cost
-- any comment about the contract
-- add photos for contract and identity card of the renter and you can add anything else
+- Any comment about the contract
+- Add photos for contract and identity card of the renter and you can add anything else
 
 ![alt text](https://github.com/khaledsabry97/Rent/blob/master/Pictures/renew%20contract.jpg)
+
+## Break Contract
+### You can do the following :-
+- Select renter name: to break the contract with him
+
+![alt text](https://github.com/khaledsabry97/Rent/blob/master/Pictures/break%20contract.jpg)
+
+## Edit Contract
+### You can edit the following :-
+- Renter Name : by selecting the block you want to change contract to
+- Rent Cost
+- Service Cost
+- Contract Start Date
+- Contract End Date
+- Incrementing Ratio
+- Renter Phone
+- Warranty
+- Renter Original Address
+- Renter Email
+- Any comment about the contract
+- Add photos for contract and identity card of the renter and you can add anything else
+
+![alt text](https://github.com/khaledsabry97/Rent/blob/master/Pictures/edit%20contract.jpg)
 
 ## See Contracts Info
 ### You can see the following :-
