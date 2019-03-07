@@ -18,9 +18,44 @@ this is an app is used by the person who has apartments, shops or any block who 
 
 ![alt text](https://github.com/khaledsabry97/Rent/blob/master/Pictures/main%20menu.JPG)
 
+## Add Block
+### You can add the following :-
+- block type: determine block type (Apartment, shop or warehouse)
+- Apartment Name: give to your block unique name like address
+- Electricity Account Number
+- Water Account Number
+- Gas Account Number
+- add photos for the block: some photos like apartment look any photo if you want to add or you can modify it later
+
+![alt text](https://github.com/khaledsabry97/Rent/blob/master/Pictures/add%20block.jpg)
+
+## Sign Contract
+### You can add the following :-
+- Renter Name
+- Apartment Name
+- Renter Name
+- Rent Value
+- Contract Start Date
+- Contract End Date
+- Incrementing Ratio
+- Renter Phone
+- Warranty
+- Service Value
+- Electricity Account Number (related to the apartment)
+- Electricity Counter Number (related to the renter consumption)
+- Water Account Number (related to the apartment)
+- Water Counter Number (related to the renter consumption)
+- Gas Account Number (related to the apartment)
+- Gas Counter Number (related to the renter consumption)
+- Renter Original Address
+- Renter Email
+- any comment about the contract
+- add photos for contract and identity card of the renter and you can add anything else
+
+![alt text](https://github.com/khaledsabry97/Rent/blob/master/Pictures/add%20photos.jpg?raw=true)
 
 ## See Contracts Info
-### You can do the following :-
+### You can see the following :-
 - Apartment Number
 - Renter Name
 - Rent Value
